@@ -1,0 +1,12 @@
+<div class="w-80 rounded-xl flex items-center gap-2 py-2.5 px-4 secondary-outlined">
+  <label [for]="name">
+    <fa-icon *ngIf="icon" [icon]="icon" />
+  </label>
+  <input
+    type="text"
+    [name]="name"
+    [id]="name"
+    class="outline-none text-xl w-full"
+    [placeholder]="placeholder"
+  />
+</div>

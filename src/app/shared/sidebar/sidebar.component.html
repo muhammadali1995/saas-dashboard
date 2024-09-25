@@ -1,4 +1,4 @@
-<div class="w-full min-h-screen flex flex-col sticky top-0">
+<div class="w-full h-full flex flex-col">
   <div class="border-l px-6 grow flex flex-col">
     <div class="border-b h-32 flex items-center gap-4">
       <img src="logo.png" alt="logo" class="w-16" />
@@ -12,14 +12,13 @@
       <app-link
         *ngFor="let link of links; let i = index"
         class="w-full text-right"
-        [active]="i === 0"
         [icon]="link.icon"
         [href]="link.href"
       >
         {{ link.name }}
       </app-link>
       <p class="my-4">lorem</p>
-      <app-link class="w-full text-right" [icon]="faFile" href="#">
+      <app-link class="w-full text-right" [icon]="faFile" href="/route-2">
         link
       </app-link>
     </div>
