@@ -14,20 +14,13 @@
     p {
         @apply text-sm font-normal text-gray-500
     }
+}
 
-    .btn-primary {
-        @apply bg-white px-4 py-3 rounded-xl gap-2 items-center flex hover:bg-primary
-    }
+::-webkit-scrollbar {
+    display: none;
+}
 
-    .link {
-        @apply text-gray-600 text-lg
-    }
-
-    .link-active span {
-        @apply text-black
-    }
-
-    .link-active {
-        @apply hover:text-secondary bg-primary
-    }
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
