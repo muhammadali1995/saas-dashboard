@@ -10,7 +10,7 @@ module.exports = {
         secondary: "#2f5cff"
       },
       maxHeight: {
-        150: "600px"
+        120: "480px"
       }
     },
   },
