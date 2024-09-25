@@ -5,6 +5,7 @@ import {
   faFilter,
   faSearch,
 } from '@fortawesome/free-solid-svg-icons';
+import { ButtonComponent } from '../../shared/button/button.component';
 import { DropdownComponent } from '../../shared/dropdown/dropdown.component';
 import { InputComponent } from '../../shared/input/input.component';
 import { TableComponent } from '../../shared/table/table.component';
@@ -17,6 +18,7 @@ import { TableComponent } from '../../shared/table/table.component';
     TableComponent,
     DropdownComponent,
     InputComponent,
+    ButtonComponent,
   ],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css',
