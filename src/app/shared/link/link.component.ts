@@ -6,7 +6,7 @@ import {
   Input,
   QueryList,
 } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
@@ -19,9 +19,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 export class LinkComponent {
   @ContentChildren(ElementRef, { descendants: true })
   children!: QueryList<ElementRef>;
-  
+
   @Input() href!: string;
   @Input() icon: any = null;
   @Input() class: string = '';
-  @Input() active: boolean = false;
+
+  constructor(private router: Router) {}
+
+  isRouteActive(route: string): boolean {
+    return this.router.url === route;
+  }
 }

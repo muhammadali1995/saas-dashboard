@@ -1,3 +1,44 @@
-<div class="pt-4">
-  <app-table [columns]="tableColumns" [data]="tableData" />
+<div class="my-4 border h-fit rounded-xl py-4">
+  <div class="border-b p-4 pb-0 pt-0">
+    <h3>Title</h3>
+    <div class="flex items-end justify-between">
+      <div class="flex gap-4">
+        <button class="tab active">Tab number 1</button>
+        <button class="tab">Tab number 1</button>
+      </div>
+      <div class="flex items-center gap-4 pb-4">
+        <app-input name="search" placeholder="search" [icon]="faSearch" />
+        <app-dropdown
+          defaultValue="Tap to Filter"
+          variant="secondary"
+          [options]="options"
+          [icon]="faFilter"
+          direction="rtl"
+        />
+        <app-dropdown
+          variant="secondary"
+          defaultValue="Tap to Sort"
+          [options]="options"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="px-4 mt-4">
+    <app-table [columns]="tableColumns" [data]="tableData" />
+  </div>
+  <div class="flex justify-between items-center py-6 px-4">
+    <div>
+      <span>2 out of 16</span>
+    </div>
+    <div class="flex items-center flex-row-reverse gap-2">
+      <app-button variant="secondary-outlined" class="py-1.5"> 1 </app-button>
+      <app-button variant="secondary-outlined" class="py-1.5"> 2 </app-button>
+      <app-button variant="secondary-outlined" class="py-1.5"> 3 </app-button>
+      <app-button variant="secondary-outlined" class="py-1.5"> 4 </app-button>
+      <app-button variant="secondary-outlined" class="py-1.5"> 5 </app-button>
+      <app-button variant="secondary-outlined" class="py-1.5"> ... </app-button>
+      <app-button variant="secondary-outlined" class="py-1.5"> 16 </app-button>
+    </div>
+    <div></div>
+  </div>
 </div>
