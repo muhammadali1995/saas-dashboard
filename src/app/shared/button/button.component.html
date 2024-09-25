@@ -1,4 +1,4 @@
-<button [class]="'btn-primary ' + class">
-  <fa-icon [icon]="icon" />
-  <span class="font-semibold text-lg">{{ text }}</span>
+<button [class]="variant + ' ' + class">
+  <fa-icon *ngIf="icon" [icon]="icon" />
+  <ng-content />
 </button>

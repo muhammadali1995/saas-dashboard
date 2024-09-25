@@ -1,1 +1,46 @@
-<p>table works!</p>
+<table class="w-full">
+  <thead
+    class="flex items-center w-full rounded-xl bg-primary text-gray-600 py-3 px-6"
+  >
+    <tr class="w-full flex">
+      <th
+        *ngFor="let col of columns"
+        [ngClass]="{ 'cursor-pointer': col.headerSort }"
+        class="flex-1 text-right"
+      >
+        <span class="font-normal text-base">{{ col.label }}</span>
+        <span *ngIf="col.headerSort" class="mr-3">
+          <fa-icon [icon]="faSort" />
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let row of data"
+      class="flex items-center w-full py-4 border-b px-6"
+    >
+      <td *ngFor="let col of columns; let i = index" class="flex-1">
+        <div
+          *ngIf="i === 0; else elseIfContent"
+          class="flex items-center gap-3"
+        >
+          <app-checkbox [name]="'row-' + i" />
+          <span>{{ row[col.field] }}</span>
+        </div>
+        <ng-template #elseIfContent>
+          <app-button
+            variant="secondary-outlined"
+            *ngIf="i === columns.length - 1; else rowContent"
+          >
+            <span class="ml-2 block rounded-full bg-orange-500 w-2 h-2"></span>
+            <span> {{ row[col.field] }}</span>
+          </app-button>
+        </ng-template>
+        <ng-template #rowContent>
+          {{ row[col.field] }}
+        </ng-template>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,8 @@
+<label class="inline-flex items-center cursor-pointer h-5 w-5">
+  <input (change)="toggleCheckbox()" type="checkbox" class="hidden peer" />
+  <div
+    class="w-full h-full bg-white border border-gray-300 flex rounded-md peer-checked:border-secondary items-center justify-center peer-checked:bg-secondary transition duration-300"
+  >
+    <fa-icon *ngIf="checked" [icon]="faCheck" class="text-white text-xs" />
+  </div>
+</label>
