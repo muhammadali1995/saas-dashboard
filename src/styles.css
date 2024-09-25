@@ -1,4 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    h3 {
+        @apply font-bold text-xl
+    }
+
+    h6 {
+        @apply text-base font-normal text-gray-600
+    }
+
+    p {
+        @apply text-sm font-normal text-gray-500
+    }
+
+    .btn-primary {
+        @apply bg-white px-4 py-3 rounded-xl gap-2 items-center flex hover:bg-primary
+    }
+
+    .link {
+        @apply text-gray-600 text-lg
+    }
+
+    .link-active span {
+        @apply text-black
+    }
+
+    .link-active {
+        @apply hover:text-secondary bg-primary
+    }
+}
