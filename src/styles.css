@@ -14,6 +14,27 @@
     p {
         @apply text-sm font-normal text-gray-500
     }
+
+    .secondary-outlined {
+        @apply border rounded-lg text-sm px-3 py-1 flex items-center;
+    }
+
+    .link {
+        @apply text-gray-600 text-lg
+    }
+
+    .link-primary {
+        @apply bg-white px-4 py-3 rounded-xl gap-2 items-center flex hover:bg-primary
+    }
+
+    .link-active {
+        @apply text-secondary bg-primary
+    }
+
+    .link-active span {
+        @apply text-black
+    }
+
 }
 
 ::-webkit-scrollbar {
