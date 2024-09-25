@@ -1,1 +1,4 @@
-<button>Hello</button>
+<button [class]="'btn-primary ' + class">
+  <fa-icon [icon]="icon" />
+  <span class="font-semibold text-lg">{{ text }}</span>
+</button>

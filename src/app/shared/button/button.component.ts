@@ -1,15 +1,15 @@
-import {
-  Component,
-  Input,
-} from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [Input],
+  imports: [FontAwesomeModule],
   templateUrl: './button.component.html',
   styleUrl: './button.component.css',
 })
 export class ButtonComponent {
-  @Input() name!: string;
+  @Input() text!: string;
+  @Input() icon: any = null;
+  @Input() class: string = '';
 }

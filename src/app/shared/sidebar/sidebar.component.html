@@ -1,1 +1,24 @@
-<p>sidebar works!</p>
+<div class="w-full min-h-screen flex flex-col">
+  <div class="border-l px-6 grow">
+    <div class="border-b py-8 flex items-center gap-4">
+      <img src="logo.png" alt="logo" class="w-16" />
+      <div>
+        <h3>Title</h3>
+        <h6>content</h6>
+      </div>
+    </div>
+    <div class="pt-8">
+      <p>lorem</p>
+      <div class="mt-4">
+        <app-link
+          *ngFor="let link of links; let i = index"
+          class="w-full text-right"
+          [ngClass]="{ 'link-active': i === 0 }"
+          [text]="link.name"
+          [icon]="link.icon"
+          [href]="link.href"
+        />
+      </div>
+    </div>
+  </div>
+</div>
