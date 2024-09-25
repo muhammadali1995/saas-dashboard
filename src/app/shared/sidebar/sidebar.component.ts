@@ -14,7 +14,7 @@ export class SidebarComponent {
   faFile = faFile;
 
   links = [
-    { name: 'link', icon: faFile, href: '#' },
-    { name: 'link', icon: faFile, href: '#' },
+    { name: 'link', icon: faFile, href: '/admin' },
+    { name: 'link', icon: faFile, href: '/route' },
   ];
 }
