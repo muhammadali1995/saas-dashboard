@@ -1,4 +1,17 @@
-<a [routerLink]="href" [class]="'btn-primary link hover:link-active ' + class">
+<a
+  [routerLink]="href"
+  [class]="
+    'link-primary link hover:link-active ' +
+    class +
+    (active ? ' link-active' : '')
+  "
+>
   <fa-icon [icon]="icon" />
-  <span class="font-semibold text-xl">{{ text }}</span>
+  <span class="font-semibold text-xl">
+    <ng-content />
+  </span>
+  <span
+    *ngIf="active"
+    class="absolute right-0 bg-secondary h-5 w-1.5 rounded-l-xl"
+  ></span>
 </a>

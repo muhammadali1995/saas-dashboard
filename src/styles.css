@@ -15,19 +15,33 @@
         @apply text-sm font-normal text-gray-500
     }
 
-    .btn-primary {
-        @apply bg-white px-4 py-3 rounded-xl gap-2 items-center flex hover:bg-primary
+    .secondary-outlined {
+        @apply border rounded-lg text-sm px-3 py-1 flex items-center;
     }
 
     .link {
         @apply text-gray-600 text-lg
     }
 
+    .link-primary {
+        @apply bg-white px-4 py-3 rounded-xl gap-2 items-center flex hover:bg-primary
+    }
+
+    .link-active {
+        @apply text-secondary bg-primary
+    }
+
     .link-active span {
         @apply text-black
     }
 
-    .link-active {
-        @apply hover:text-secondary bg-primary
-    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
